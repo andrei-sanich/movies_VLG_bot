@@ -16,7 +16,7 @@ bot = telebot.TeleBot(config.TOKEN)
 @bot.message_handler(commands=['start'])
 def handle_start(message):
 
-    if Storer('userdata.txt').check_user(str(message.chat.id)) is not None:
+    if not Storer('userdata.txt').check_user(str(message.chat.id)):
         msg = bot.send_message(
                                 message.chat.id,
                                 'Выбирайте',
