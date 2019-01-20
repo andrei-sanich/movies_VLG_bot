@@ -1,5 +1,9 @@
 # movies_VLG_bot
 
-Бот для Telegram.
+Telegram-бот для подбора фильмов по сочетанию жанров.
 
-Telegram Bot API/Selenim/Beautiful Soup/shelve
+- Telegram Bot API
+
+- Selenim
+
+- Beautiful Soup
