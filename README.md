@@ -1,2 +1,5 @@
 # movies_VLG_bot
-Бот для Telegram, отправляющий информацию о фильмах из текущего репертуара и из близжайших премьер, исходя из жанровых предпочтений пользователя.
+
+Бот для Telegram. 
+Telegram Bot API/Selenim/Beautiful Soup/shelve
+
