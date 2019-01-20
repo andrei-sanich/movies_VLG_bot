@@ -27,7 +27,6 @@ def handle_start(message):
         Storer('userdata.txt').save_user(str(message.chat.id))
         msg = bot.send_message(message.chat.id, 'Введите название шаблона')
         bot.register_next_step_handler(msg, ask_template)
-    return
 
 
 def ask_template(message):
@@ -40,7 +39,6 @@ def ask_template(message):
                             reply_markup=markups.choice_genres
                           )
     bot.register_next_step_handler(msg, add_genres)
-    return
 
 
 def add_genres(message):        
@@ -53,7 +51,6 @@ def add_genres(message):
                             reply_markup=markups.choice_buttons2
                           )
     bot.register_next_step_handler(msg, add_genre_or_finish)
-    return
 
 
 def add_genre_or_finish(message):
@@ -72,7 +69,6 @@ def add_genre_or_finish(message):
                                 reply_markup=markups.choice_buttons1
                               )
         bot.register_next_step_handler(msg, ask_run_or_template)
-        return
 
 
 def ask_run_or_template(message):
@@ -89,7 +85,6 @@ def ask_run_or_template(message):
                                 reply_markup=markups.correct_buttons
                                )
         bot.register_next_step_handler(msg, correct_template)
-    return
 
 
 def correct_template(message):
@@ -119,7 +114,7 @@ def del_genre(message):
                             reply_markup=markups.choice_buttons2
                           )
     bot.register_next_step_handler(msg, del_genre_or_finish)
-    return
+
 
 def del_genre_or_finish(message):
 
@@ -160,7 +155,6 @@ def findMovies(userid):
     else:
         bot.send_message(userid, "Увы, и среди премьер подходящих фильмов нет")
     bot.send_message(userid, 'Готово', reply_markup=markups.start_markup)
-    return
 
 
 if __name__ == '__main__':
